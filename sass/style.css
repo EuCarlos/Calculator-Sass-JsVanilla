@@ -1,0 +1,295 @@
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+      grid-template-areas: "BtnSum BtnSubt BtnMult BtnDiv" "Btn7 Btn8 Btn9 BtnC" "Btn4 Btn5 Btn6 BtnBcs" "Btn1 Btn2 Btn3 BtnEval" "Btn0 Btn0 BtnDot BtnEval";
+}
+
+.BtnSum {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: BtnSum;
+}
+
+.BtnSubt {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: BtnSubt;
+}
+
+.BtnMult {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: BtnMult;
+}
+
+.BtnDiv {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: BtnDiv;
+}
+
+.Btn0 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Btn0;
+}
+
+.Btn1 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: Btn1;
+}
+
+.Btn2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: Btn2;
+}
+
+.Btn3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: Btn3;
+}
+
+.Btn4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: Btn4;
+}
+
+.Btn5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: Btn5;
+}
+
+.Btn6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: Btn6;
+}
+
+.Btn7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: Btn7;
+}
+
+.Btn8 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: Btn8;
+}
+
+.Btn9 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: Btn9;
+}
+
+.BtnDot {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: BtnDot;
+}
+
+.BtnEval {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: BtnEval;
+}
+
+.BtnBcs {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: BtnBcs;
+}
+
+.BtnC {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: BtnC;
+}
+
+.BtnSum {
+  font-weight: 900;
+}
+
+.BtnSubt {
+  font-weight: 900;
+}
+
+.BtnMult {
+  font-weight: 900;
+}
+
+.BtnEval {
+  font-weight: 900;
+}
+
+.BtnBcs {
+  font-weight: 900;
+}
+
+.BtnC {
+  font-weight: 900;
+}
+
+* {
+  border: 0;
+  margin: 0;
+}
+
+body {
+  background: #123456;
+}
+
+.container {
+  background: #000;
+  width: 288px;
+  height: 437px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.384);
+          box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.384);
+  position: fixed;
+  z-index: 999;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.display-calc {
+  background: #000;
+}
+
+.display-calc textarea {
+  width: 99%;
+  height: 120px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+  font-size: 3.5em;
+  text-align: right;
+  resize: none;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  color: #fff;
+  background: #184572;
+}
+
+button:hover {
+  background: #205C97;
+}
+
+.BtnC button {
+  background: #D90429;
+}
+
+.BtnC button:hover {
+  background: #FA0F36;
+}
+
+.BtnEval button {
+  background: #9BC53D;
+  height: 100px;
+}
+
+.BtnEval button:hover {
+  background: #ADD062;
+}
+
+.clear-bcs {
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.clear-bcs button {
+  background: #000;
+  color: #fff;
+  font-size: 1em;
+  height: 20px;
+  width: 50px;
+}
+
+footer, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer button, header button {
+  background: #000;
+  font-size: 1em;
+  height: 20px;
+}
+
+footer button:hover, header button:hover {
+  background: #1f1e1e;
+}
+
+footer button:first-child, header button:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+footer button:last-child, header button:last-child {
+  border-radius: 0 0 10px 0;
+}
+
+footer a, header a {
+  color: #fff;
+}
+
+footer a:link, header a:link {
+  color: #fff;
+}
+
+footer p, header p {
+  color: #fff;
+}
+
+header {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header:first-child {
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-right: 10px;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #D90429;
+  border-radius: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

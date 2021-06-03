@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "BtnSum BtnSubt BtnMult BtnDiv"
+      "Btn7 Btn8 Btn9 BtnC"
+      "Btn4 Btn5 Btn6 BtnBcs"
+      "Btn1 Btn2 Btn3 BtnEval"
+      "Btn0 Btn0 BtnDot BtnEval"
+  }
+  .BtnSum { grid-area: BtnSum;}
+  .BtnSubt { grid-area: BtnSubt;}
+  .BtnMult { grid-area: BtnMult;}
+  .BtnDiv { grid-area: BtnDiv;}
+  
+  @for $i from 0 through 9 {
+    .Btn#{$i} { grid-area: Btn#{$i};}
+  }
+
+  .BtnDot { grid-area: BtnDot;}
+  .BtnEval { grid-area: BtnEval;}
+  .BtnBcs { grid-area: BtnBcs;}
+  .BtnC { grid-area: BtnC;}
+
+  @each $button-bold in Sum, Subt, Mult, Eval, Bcs, C {
+    .Btn#{$button-bold} { font-weight: 900; }
+  }
