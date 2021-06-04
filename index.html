@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,32 +12,32 @@
 <body>
     <div class="container">
         <header>
-            <p>19:28</p>
+            <p id="uptade-time"></p>
             <p><i class="fas fa-battery-quarter"></i></p>
         </header>
         <div class="display-calc">
-            <textarea></textarea>
+            <textarea id="result" placeholder="0"></textarea>
         </div>
-        <div class="clear-bcs"><button><i class="fas fa-backspace"></i></button></div>
+        <div class="clear-bcs"><button onClick="backspaceKey()"><i class="fas fa-backspace"></i></button></div>
         <div class="grid-container">
-            <div class="BtnSum BtnStyle"><button>+</button></div>
-            <div class="BtnSubt BtnStyle"><button>-</button></div>
-            <div class="BtnMult BtnStyle"><button>x</button></div>
-            <div class="BtnDiv BtnStyle"><button>/</button></div>
-            <div class="Btn7 BtnStyle"><button>7</button></div>
-            <div class="Btn8 BtnStyle"><button>8</button></div>
-            <div class="Btn9 BtnStyle"><button>9</button></div>
-            <div class="Btn4 BtnStyle"><button>4</button></div>
-            <div class="Btn5 BtnStyle"><button>5</button></div>
-            <div class="Btn6 BtnStyle"><button>6</button></div>
-            <div class="Btn1 BtnStyle"><button>1</button></div>
-            <div class="Btn2 BtnStyle"><button>2</button></div>
-            <div class="Btn3 BtnStyle"><button>3</button></div>
-            <div class="Btn0 BtnStyle"><button>0</button></div>
-            <div class="BtnDot BtnStyle"><button>.</button></div>
-            <div class="BtnEval BtnStyle"><button>=</button></div>
-            <div class="BtnBcs BtnStyle"><button>%</button></div>
-            <div class="BtnC BtnStyle"><button>C</button></div>
+            <div class="BtnSum"><button onClick="addNumber('+')">+</button></div>
+            <div class="BtnSubt"><button onClick="addNumber('-')">-</button></div>
+            <div class="BtnMult"><button onClick="addNumber('*')">x</button></div>
+            <div class="BtnDiv"><button onClick="addNumber('/')">/</button></div>
+            <div class="Btn7"><button onClick="addNumber('7')">7</button></div>
+            <div class="Btn8"><button onClick="addNumber('8')">8</button></div>
+            <div class="Btn9"><button onClick="addNumber('9')">9</button></div>
+            <div class="Btn4"><button onClick="addNumber('4')">4</button></div>
+            <div class="Btn5"><button onClick="addNumber('5')">5</button></div>
+            <div class="Btn6"><button onClick="addNumber('6')">6</button></div>
+            <div class="Btn1"><button onClick="addNumber('1')">1</button></div>
+            <div class="Btn2"><button onClick="addNumber('2')">2</button></div>
+            <div class="Btn3"><button onClick="addNumber('3')">3</button></div>
+            <div class="Btn0"><button onClick="addNumber('0')">0</button></div>
+            <div class="BtnDot"><button onClick="addNumber('.')">.</button></div>
+            <div class="BtnEval"><button onClick="calculateResult()">=</button></div>
+            <div class="BtnBcs"><button onClick="porcentageKey()">%</button></div>
+            <div class="BtnC"><button onClick="eraseResult()">C</button></div>
         </div>
         
         <footer>
@@ -46,5 +46,6 @@
             <button><a href="http://instagram.com/carlos.alves" target="_blank"><i class="fab fa-instagram"></i></a></button>
         </footer>
     </div>
+    <script src="JS/main.js"></script>
 </body>
 </html>
